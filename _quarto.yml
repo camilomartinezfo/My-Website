@@ -1,0 +1,33 @@
+project:
+  type: website
+
+website:
+  title: "CV Camilo"
+  navbar:
+    background: secondary
+    left:
+      - href: index.qmd
+        text: Home
+      - skills.qmd
+      - teaching.qmd
+      - work.qmd
+      - publications.qmd
+      - portfolio.qmd
+  favicon: Images/favicon.png
+  page-footer: 
+    center: "Copyright 2023, Camilo Martínez"
+    right:
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com/
+    background: light
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+

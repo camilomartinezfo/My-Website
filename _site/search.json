@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Camilo Enrique Martínez Forero",
+    "section": "",
+    "text": "Ingeniero forestal y estudiante de maestría en Bosques y Conservación Ambiental, con experiencia en modelación del crecimiento forestal en plantaciones y especies de bosque natural. Intereses centrados en la investigación de métodos cuantitativos, modelación estadística, programación y análisis espacial aplicados a crecimiento de masas boscosas, manejo forestal, ecología y deforestación."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#pregrado",
+    "href": "index.html#pregrado",
+    "title": "Camilo Enrique Martínez Forero",
+    "section": "Pregrado",
+    "text": "Pregrado\n\nIngeniería Forestal. 2022. Departamento de Ciencias Forestales, Facultad de Ciencias Agrarias, Universidad Nacional de Colombia, Medellín, Colombia. Tesis: Modelación del crecimiento en altura de plantaciones forestales de teca (Tectona grandis L.f.) usando covariables ambientales. Director: Sergio Alonso Orrego Suaza, Ph.D."
+  },
+  {
+    "objectID": "index.html#posgrado",
+    "href": "index.html#posgrado",
+    "title": "Camilo Enrique Martínez Forero",
+    "section": "Posgrado",
+    "text": "Posgrado\n\nMaestría en Bosques y Conservación Ambiental (En curso). Facultad de Ciencias Agrarias, Universidad Nacional de Colombia, Medellín, Colombia. Tesis [en desarrollo]: Modelación del crecimiento diamétrico de especies forestales del Chocó biogeográfico. Director: Sergio Alonso Orrego Suaza, Ph.D."
+  },
+  {
+    "objectID": "index.html#formación-complementaria",
+    "href": "index.html#formación-complementaria",
+    "title": "Camilo Enrique Martínez Forero",
+    "section": "Formación complementaria",
+    "text": "Formación complementaria\n\n\nProgramación con énfasis en desarrollo de aplicaciones web. 2021. Misión TIC 2022. Universidad de Antioquia. Formación de competencias en los lenguajes de programación Python, Java y desarrollo web básico de frontend y backend usando JavaScript, ReactJS, NodeJS y MongoDB.\nThe Data Scientist's Toolbox. 2020. Coursera. Johns Hopkins University. Curso virtual.\nR programming. 2020. Coursera. Johns Hopkins University. Curso virtual."
+  },
+  {
+    "objectID": "skills.html",
+    "href": "skills.html",
+    "title": "Skills",
+    "section": "",
+    "text": "Métodos cuantitativos y estadísticos en modelación del crecimiento, cuantificación de biomasa, productividad, análisis de anillos de crecimiento."
+  },
+  {
+    "objectID": "skills.html#análisis-estadístico",
+    "href": "skills.html#análisis-estadístico",
+    "title": "Skills",
+    "section": "Análisis estadístico",
+    "text": "Análisis estadístico\nRegresión lineal, regresión no lineal, modelos lineales generalizados, modelos no lineales generalizados, modelos de efectos mixtos, inferencia estadística, estadística descriptiva, series de tiempo, técnicas computacionales en estadística, simulación Monte Carlo, bootstrap, estadística espacial."
+  },
+  {
+    "objectID": "skills.html#análisis-espacial-teledetección-sig",
+    "href": "skills.html#análisis-espacial-teledetección-sig",
+    "title": "Skills",
+    "section": "Análisis espacial, teledetección, SIG",
+    "text": "Análisis espacial, teledetección, SIG\nR, QGIS, ArcGIS, Python, SNAP, Google Earth Engine, ENVI, métodos de interpolación espacial, geoestadística, patrones de puntos, datos en áreas."
+  },
+  {
+    "objectID": "skills.html#programación",
+    "href": "skills.html#programación",
+    "title": "Skills",
+    "section": "Programación",
+    "text": "Programación\nR, Python, JavaScript, desarrollo web."
+  },
+  {
+    "objectID": "skills.html#soft-skills",
+    "href": "skills.html#soft-skills",
+    "title": "Skills",
+    "section": "Soft skills",
+    "text": "Soft skills\nTrabajo en equipo, comunicación oral y escrita, liderazgo."
+  },
+  {
+    "objectID": "skills.html#languages",
+    "href": "skills.html#languages",
+    "title": "Skills",
+    "section": "Languages",
+    "text": "Languages\nEspañol (nativo), Inglés (intermedio)."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Apoyo (ad honorem) en actividades de docencia y asesoría a los estudiantes del curso de crecimiento forestal, a cargo del docente Sergio Alonso Orrego Suaza.\n\n\n\n\n\n\n\nEntidad\nUniversidad Nacional de Colombia sede Medellín. Facultad de Ciencias Agrarias. Departamento de Ciencias Forestales\n\n\nFechas\nMarzo 2022 - Junio 2022\nFebrero 2023 - Junio 2023\n\n\n\n\n\n\nClases sobre métodos cuantitativos usados en la modelación del crecimiento forestal.\nElaboración de scripts con código en R sobre modelos de crecimiento y métodos de regresión no lineal.\nOrganización de bases de datos de crecimiento forestal."
+  }
+]

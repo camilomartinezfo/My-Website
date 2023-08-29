@@ -1,0 +1,27 @@
+---
+title: "Skills"
+---
+
+## Biometría forestal
+
+Métodos cuantitativos y estadísticos en modelación del crecimiento, cuantificación de biomasa, productividad, análisis de anillos de crecimiento.
+
+## Análisis estadístico
+
+Regresión lineal, regresión no lineal, modelos lineales generalizados, modelos no lineales generalizados, modelos de efectos mixtos, inferencia estadística, estadística descriptiva, series de tiempo, técnicas computacionales en estadística, simulación Monte Carlo, bootstrap, estadística espacial.
+
+## Análisis espacial, teledetección, SIG
+
+R, QGIS, ArcGIS, Python, SNAP, Google Earth Engine, ENVI, métodos de interpolación espacial, geoestadística, patrones de puntos, datos en áreas.
+
+## Programación
+
+R, Python, JavaScript, desarrollo web.
+
+## Soft skills
+
+Trabajo en equipo, comunicación oral y escrita, liderazgo.
+
+## Languages
+
+Español (nativo), Inglés (intermedio).
