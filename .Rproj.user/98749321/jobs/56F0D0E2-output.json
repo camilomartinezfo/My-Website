@@ -1,0 +1,6 @@
+[2,"\n"]
+[1,"pandoc \n  to: html\n  output-file: index.html\n  standalone: true\n  title-prefix: CV Camilo\n  section-divs: true\n  html-math-method: mathjax\n  wrap: none\n  default-image-extension: png\n  css:\n    - styles.css\n  toc: true\n  \nmetadata\n  document-css: false\n  link-citations: true\n  date-format: long\n  lang: en\n  editor: visual\n  theme: cosmo\n  title: Camilo Enrique Martínez Forero\n  \n"]
+[1,"Output created: docs\\index.html\n\nTerminating existing preview server....DONE\n\nPreparing to preview\n"]
+[1,"\n"]
+[1,"Watching files for changes\nBrowse at http://localhost:5290/\n"]
+[1,"GET: /\n"]
