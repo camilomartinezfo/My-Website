@@ -28,7 +28,7 @@ Enrolled in a Master's Program in Forests and Environmental Conservation. Facult
 ::: justify
 -   Programming with an emphasis on web application development. 2021. Misión TIC 2022. Universidad de Antioquia. Training in programming languages Python and Java, as well as basic frontend and backend web development using JavaScript, ReactJS, NodeJS and MongoDB.
 
--   The Data Scientist's Toolbox. 2020. Coursera. Johns Hopkins University. Curso virtual.
+-   The Data Scientist's Toolbox. 2020. Coursera. Johns Hopkins University. Online course.
 
--   R programming. 2020. Coursera. Johns Hopkins University. Curso virtual.
+-   R programming. 2020. Coursera. Johns Hopkins University. Online course.
 :::

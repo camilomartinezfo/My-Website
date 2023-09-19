@@ -46,6 +46,118 @@
     "href": "index.html#supplementary-education",
     "title": "Camilo Enrique Martínez Forero",
     "section": "Supplementary education",
-    "text": "Supplementary education\n\n\nProgramming with an emphasis on web application development. 2021. Misión TIC 2022. Universidad de Antioquia. Training in programming languages Python and Java, as well as basic frontend and backend web development using JavaScript, ReactJS, NodeJS and MongoDB.\nThe Data Scientist’s Toolbox. 2020. Coursera. Johns Hopkins University. Curso virtual.\nR programming. 2020. Coursera. Johns Hopkins University. Curso virtual."
+    "text": "Supplementary education\n\n\nProgramming with an emphasis on web application development. 2021. Misión TIC 2022. Universidad de Antioquia. Training in programming languages Python and Java, as well as basic frontend and backend web development using JavaScript, ReactJS, NodeJS and MongoDB.\nThe Data Scientist’s Toolbox. 2020. Coursera. Johns Hopkins University. Online course.\nR programming. 2020. Coursera. Johns Hopkins University. Online course."
+  },
+  {
+    "objectID": "skills.html",
+    "href": "skills.html",
+    "title": "Skills",
+    "section": "",
+    "text": "Quantitative and statistical methods in growth modeling, biomass quantification, forest productivity, and tree ring analysis."
+  },
+  {
+    "objectID": "skills.html#biometría-forestal",
+    "href": "skills.html#biometría-forestal",
+    "title": "Skills",
+    "section": "",
+    "text": "Métodos cuantitativos y estadísticos en modelación del crecimiento, cuantificación de biomasa, productividad, análisis de anillos de crecimiento."
+  },
+  {
+    "objectID": "skills.html#análisis-estadístico",
+    "href": "skills.html#análisis-estadístico",
+    "title": "Skills",
+    "section": "Análisis estadístico",
+    "text": "Análisis estadístico\nRegresión lineal, regresión no lineal, modelos lineales generalizados, modelos no lineales generalizados, modelos de efectos mixtos, inferencia estadística, estadística descriptiva, series de tiempo, técnicas computacionales en estadística, simulación Monte Carlo, bootstrap, estadística espacial."
+  },
+  {
+    "objectID": "skills.html#análisis-espacial-teledetección-sig",
+    "href": "skills.html#análisis-espacial-teledetección-sig",
+    "title": "Skills",
+    "section": "Análisis espacial, teledetección, SIG",
+    "text": "Análisis espacial, teledetección, SIG\nR, QGIS, ArcGIS, Python, SNAP, Google Earth Engine, ENVI, métodos de interpolación espacial, geoestadística, patrones de puntos, datos en áreas."
+  },
+  {
+    "objectID": "skills.html#programación",
+    "href": "skills.html#programación",
+    "title": "Skills",
+    "section": "Programación",
+    "text": "Programación\nR, Python, JavaScript, desarrollo web."
+  },
+  {
+    "objectID": "skills.html#soft-skills",
+    "href": "skills.html#soft-skills",
+    "title": "Skills",
+    "section": "Soft skills",
+    "text": "Soft skills\nTeamwork, oral and written communication, leadership."
+  },
+  {
+    "objectID": "skills.html#languages",
+    "href": "skills.html#languages",
+    "title": "Skills",
+    "section": "Languages",
+    "text": "Languages\nSpanish (native), English (intermediate)."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "Classes in the Forest Growth Modeling module of the First Diploma in Forest Resource Economics, offered by FEDEMADERAS.\n\n\n\n\n\n\n\nOrganization\nFederación Nacional de Industriales de la Madera, FEDEMADERAS, Colombia.\n\n\nDates\nAugust 2023\n\n\n\n\n\n\nConducted classes on quantitative and statistical methods utilized in forest growth modeling, theory of organic growth and site index concepts.\nAssisting students with questions."
+  },
+  {
+    "objectID": "teaching.html#monitor-académico---crecimiento-forestal",
+    "href": "teaching.html#monitor-académico---crecimiento-forestal",
+    "title": "Teaching",
+    "section": "",
+    "text": "Apoyo (ad honorem) en actividades de docencia y asesoría a los estudiantes del curso de crecimiento forestal, a cargo del docente Sergio Alonso Orrego Suaza.\n\n\n\n\n\n\n\nEntidad\nUniversidad Nacional de Colombia sede Medellín. Facultad de Ciencias Agrarias. Departamento de Ciencias Forestales\n\n\nFechas\nMarzo 2022 - Junio 2022\nFebrero 2023 - Junio 2023\n\n\n\n\n\n\nClases sobre métodos cuantitativos usados en la modelación del crecimiento forestal.\nElaboración de scripts con código en R sobre modelos de crecimiento y métodos de regresión no lineal.\nOrganización de bases de datos de crecimiento forestal."
+  },
+  {
+    "objectID": "skills.html#forest-biometrics",
+    "href": "skills.html#forest-biometrics",
+    "title": "Skills",
+    "section": "",
+    "text": "Quantitative and statistical methods in growth modeling, biomass quantification, forest productivity, and tree ring analysis."
+  },
+  {
+    "objectID": "skills.html#statistical-analysis",
+    "href": "skills.html#statistical-analysis",
+    "title": "Skills",
+    "section": "Statistical analysis",
+    "text": "Statistical analysis\nLinear regression, nonlinear regression, generalized lineal models, generalized nonlinear models, mixed-effects models, statistical inference, descriptive statistics, time series analysis, statistical simulation, and spatial statistics."
+  },
+  {
+    "objectID": "skills.html#spatial-analysis-remote-sensing-gis",
+    "href": "skills.html#spatial-analysis-remote-sensing-gis",
+    "title": "Skills",
+    "section": "Spatial analysis, remote sensing, GIS",
+    "text": "Spatial analysis, remote sensing, GIS\nR, QGIS, ArcGIS, Python, SNAP, Google Earth Engine, ENVI, spatial interpolation methods, geostatistics, point pattern analysis, and areal data."
+  },
+  {
+    "objectID": "skills.html#programming",
+    "href": "skills.html#programming",
+    "title": "Skills",
+    "section": "Programming",
+    "text": "Programming\nR, Python, JavaScript, Web development."
+  },
+  {
+    "objectID": "teaching.html#academic-tutor---forest-growth",
+    "href": "teaching.html#academic-tutor---forest-growth",
+    "title": "Teaching",
+    "section": "Academic tutor - Forest Growth",
+    "text": "Academic tutor - Forest Growth\nProvided (ad honorem) support in teaching activities for students in the undergraduate forest growth course, under the supervision of Professor Sergio Alonso Orrego Suaza.\n\n\n\n\n\n\n\nOrganization\nUniversidad Nacional de Colombia sede Medellín. Facultad de Ciencias Agrarias. Departamento de Ciencias Forestales\n\n\nDates\nMarch 2022 - June 2022\nFebruary 2023 - June 2023\n\n\n\n\nFunctions:\n\nConducted classes on quantitative methods utilized in forest growth modeling.\nDeveloped R scripts for growth models and nonlinear regression methods.\nOrganized databases related to forest growth."
+  },
+  {
+    "objectID": "teaching.html#professor---forest-growth-modeling",
+    "href": "teaching.html#professor---forest-growth-modeling",
+    "title": "Teaching",
+    "section": "",
+    "text": "Classes in the Forest Growth Modeling module of the First Diploma in Forest Resource Economics, offered by FEDEMADERAS.\n\n\n\n\n\n\n\nOrganization\nFederación Nacional de Industriales de la Madera, FEDEMADERAS, Colombia.\n\n\nDates\nAugust 2023\n\n\n\n\n\n\nConducted classes on quantitative and statistical methods utilized in forest growth modeling, theory of organic growth and site index concepts.\nAssisting students with questions."
+  },
+  {
+    "objectID": "teaching.html#teaching-support---silviculture-of-forest-plantations",
+    "href": "teaching.html#teaching-support---silviculture-of-forest-plantations",
+    "title": "Teaching",
+    "section": "Teaching support - Silviculture of Forest Plantations",
+    "text": "Teaching support - Silviculture of Forest Plantations\nProvided support in teaching activities for students in the undergraduate silviculture of forest plantations course, under the supervision of Professor Luis Fernando Osorio Vélez.\n\n\n\n\n\n\n\nOrganization\nUniversidad Nacional de Colombia sede Medellín. Facultad de Ciencias Agrarias. Departamento de Ciencias Forestales\n\n\nDates\nSeptember 2022, March 2023\n\n\n\n\nFunctions:\n\nConducted classes on quantitative and statistical methods utilized in forest growth modeling, site index and productivity of forest plantations."
   }
 ]
