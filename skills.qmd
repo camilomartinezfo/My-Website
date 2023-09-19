@@ -6,7 +6,7 @@ title: "Skills"
 
 Quantitative and statistical methods in growth modeling, biomass quantification, forest productivity, and tree ring analysis.
 
-## Statistical analysis 
+## Statistical analysis
 
 Linear regression, nonlinear regression, generalized lineal models, generalized nonlinear models, mixed-effects models, statistical inference, descriptive statistics, time series analysis, statistical simulation, and spatial statistics.
 
