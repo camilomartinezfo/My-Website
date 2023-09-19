@@ -3,29 +3,30 @@ title: "Camilo Enrique Martínez Forero"
 ---
 
 ::: justify
-Forest engineer y estudiante de maestría en Bosques y Conservación Ambiental, con experiencia en modelación del crecimiento forestal en plantaciones y especies de bosque natural. Intereses centrados en la investigación de métodos cuantitativos, modelación estadística, programación y análisis espacial aplicados a crecimiento de masas boscosas, manejo forestal, ecología y deforestación.
+Forest engineer and master's student in Forests and Environmental Conservation with experience in modeling forest growth in plantations and natural forest species. My interests are centered around quantitative research methods, statistical modeling, programming, and spatial analysis, all applied to the fields of forest growth, forest
+management, ecology, and deforestation.
 :::
 
 ![](Images/Profile.png){fig-align="center" width="250"}
 
-# Formación académica
+# Academic background
 
-## Pregrado
+## Undergraduate studies 
 
 ::: justify
-Ingeniería Forestal. 2022. Departamento de Ciencias Forestales, Facultad de Ciencias Agrarias, Universidad Nacional de Colombia, Medellín, Colombia. Tesis: *Modelación del crecimiento en altura de plantaciones forestales de teca (Tectona grandis L.f.) usando covariables ambientales*. Director: Sergio Alonso Orrego Suaza, Ph.D.
+Forest Engineering. 2022. Departamento de Ciencias Forestales, Facultad de Ciencias Agrarias, Universidad Nacional de Colombia, Medellín, Colombia. Thesis: *Modeling dominant height growth of teak plantations (Tectona grandis L.f.) using environmental covariates*. Thesis Advisor: Sergio Alonso Orrego Suaza, Ph.D.
 :::
 
-## Posgrado
+## Graduate studies
 
 ::: justify
-Maestría en Bosques y Conservación Ambiental (En curso). Facultad de Ciencias Agrarias, Universidad Nacional de Colombia, Medellín, Colombia. Tesis \[en desarrollo\]: *Modelación del crecimiento diamétrico de especies forestales del Chocó biogeográfico*. Director: Sergio Alonso Orrego Suaza, Ph.D.
+Enrolled in a Master's Program in Forests and Environmental Conservation. Facultad de Ciencias Agrarias, Universidad Nacional de Colombia, Medellín, Colombia. Current Master's Thesis work: *Diameter growth, ontogenic and silvicultural traits of tropical trees in the Chocó biogeographic region.* Thesis Advisor: Sergio Alonso Orrego Suaza, Ph.D.
 :::
 
-## Formación complementaria
+## Supplementary education
 
 ::: justify
--   Programación con énfasis en desarrollo de aplicaciones web. 2021. Misión TIC 2022. Universidad de Antioquia. Formación de competencias en los lenguajes de programación Python, Java y desarrollo web básico de frontend y backend usando JavaScript, ReactJS, NodeJS y MongoDB.
+-   Programming with an emphasis on web application development. 2021. Misión TIC 2022. Universidad de Antioquia. Training in programming languages Python and Java, as well as basic frontend and backend web development using JavaScript, ReactJS, NodeJS and MongoDB.
 
 -   The Data Scientist's Toolbox. 2020. Coursera. Johns Hopkins University. Curso virtual.
 
