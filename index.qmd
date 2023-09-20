@@ -3,15 +3,14 @@ title: "Camilo Enrique Martínez Forero"
 ---
 
 ::: justify
-Forest engineer and master's student in Forests and Environmental Conservation with experience in modeling forest growth in plantations and natural forest species. My interests are centered around quantitative research methods, statistical modeling, programming, and spatial analysis, all applied to the fields of forest growth, forest
-management, ecology, and deforestation.
+Forest engineer and master's student in Forests and Environmental Conservation with experience in modeling forest growth in plantations and natural forest species. My interests are centered around quantitative research methods, statistical modeling, programming, and spatial analysis, all applied to the fields of forest growth, forest management, ecology, and deforestation.
 :::
 
 ![](Images/Profile.png){fig-align="center" width="250"}
 
 # Academic background
 
-## Undergraduate studies 
+## Undergraduate studies
 
 ::: justify
 Forest Engineering. 2022. Departamento de Ciencias Forestales, Facultad de Ciencias Agrarias, Universidad Nacional de Colombia, Medellín, Colombia. Thesis: *Modeling dominant height growth of teak plantations (Tectona grandis L.f.) using environmental covariates*. Thesis Advisor: Sergio Alonso Orrego Suaza, Ph.D.

@@ -50,3 +50,13 @@ Provided support in teaching activities for students in the undergraduate silvic
 #### Functions:
 
 -   Conducted classes on quantitative and statistical methods utilized in forest growth modeling, site index and productivity of forest plantations.
+
+## Speaker - Forest Symposium
+
+Presentation of my undergraduate Thesis *Modeling dominant height growth of teak plantations (Tectona grandis L.f.) using environmental covariates* at the Forest Symposium.
+
++--------------+--------------------------------------------------------------------------------------------------------------------+
+| Organization | Universidad Nacional de Colombia sede Medellín. Facultad de Ciencias Agrarias. Departamento de Ciencias Forestales |
++--------------+--------------------------------------------------------------------------------------------------------------------+
+| Dates        | December 2022                                                                                                      |
++--------------+--------------------------------------------------------------------------------------------------------------------+
