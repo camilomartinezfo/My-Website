@@ -1,0 +1,291 @@
+---
+title: "Optim function for fitting forest growth models"
+bibliography: references.bib
+csl: apa.csl
+date: 2023-11-08
+author:
+  - name:
+      - Camilo Enrique Martínez Forero
+    affiliations:
+      - caemartinezfo@unal.edu.co
+      - Universidad Nacional de Colombia sede Medellín
+format: 
+  html:
+    toc: true
+    embed-resources: true
+    theme: cosmo
+    css: styles.css
+editor: visual
+---
+
+## 1. Introduction
+
+::: justify
+Growth models have been widely used in forest management to assess several stand and individual attributes, such as timber yields, forest site productivity, trees' lifespan, growth rate curves, among others [@Inga2017; @torres_teak_2020]. The growth patterns of a tree or stand variable, such as timber volume, diameter, or height, exhibit a sigmoid curve when growth accumulates over time [@Salas-Eljatib2021]. Three phases could be identified during the lifetime of a tree or stand: i) acceleration, where growth rates increases exponentially over time until reaching the inflection point of the curve; ii) intermediate, where growth is directly proportional to time; and iii) deceleration, where growth rates decrease and approach zero when the asymptote is reached [@Salas-Eljatib2021]. This demonstrates that growth is clearly nonlinear, and as such, nonlinear regression should be employed for forest growth modeling.
+
+Several mathematical models have been employed to study forest growth, as they tend to exhibit a sigmoid form with the three growth phases described. Some of these widely used empirical models include von Bertalanffy, Logistic, Lundqvist-Korf, Schumacher, Monomolecular, Gompertz, among others [@Giraldo2011; @Rosa2017; @Salas-Eljatib2021]. Fitting these models using nonlinear least squares estimators relies on numerical approximation techniques since there is no closed solution available to calculate the parameter values. In the software R, fitting requires the use of the *nls* function, which provides various optimization algorithms to determine the model parameter values that minimize the sum of squared errors. The available optimization algorithms in *nls* are Gauss-Newton, Golub-Pereyra (plinear), and nl2sol (port).
+
+These algorithms are based on the approximation of the objective function (sum of squared errors) by calculating partial derivatives with respect to each of the parameters. While they perform well with some datasets, there are instances where they may fail to converge. The most common reasons for convergence failures include: i) encountering a singular gradient matrix; ii) encountering indeterminacy in the calculation of partial derivatives; and iii) employing an inadequate model for the data [@zebiani_2020]. Often, inadequate initial values could lead to these convergence failures. These challenges can be addressed by using alternative optimization algorithms, such as R's own *optim* function. Therefore, this document aims to explore the *optim* function for fitting nonlinear models used in forestry, using a case study involving the diameter growth of abarco (*Cariniana pyriformis*).
+:::
+
+## 2. Abarco growth data
+
+::: justify
+Diameter growth data from abarco trees were obtained using dendrochronological techniques. These trees originate from the Chocó biogeographic region in Colombia [@Moreno2015]. These data will be utilized to demonstrate the fitting of nonlinear models using the *optim* function. The dataset comprises a subsample of 50 observations with three variables, age (years), diameter growth rate (cm/year), and diameter (cm).
+
+```{r}
+# Read the data 
+data <- read.csv2("Abarco.csv")[,c(3,5,6)]
+colnames(data) <- c("Age", "dD", "D")
+data$dD <- data$dD/10 # cm/year
+data$D <- data$D/10 # cm
+```
+
+There are records of tree age ranging from 4 to 162 years, cumulative diameters ranging from 1.29 to 178.77 cm, and diameter growth rates ranging from 0.14 to 2.52 cm/year (Table 1). The means for these variables are 67.24 years, 48.93 cm, and 0.75 cm/year, respectively.
+
+```{r}
+#| echo: false
+library(kableExtra)
+tabla_resumen <- data.frame(
+  Variable = c("Age (years)", "Diameter (cm)", "Growth rate (cm/year)"),
+  Min = c(min(data$Age), min(data$D), min(data$dD)),
+  Max = c(max(data$Age), max(data$D), max(data$dD)),
+  Mean = c(mean(data$Age), mean(data$D), mean(data$dD)),
+  SE = c(sd(data$Age), sd(data$D), sd(data$dD))
+)
+
+rownames(tabla_resumen) <- NULL
+kbl((tabla_resumen), digits=2, align = "c", na="", caption = "Table 1. Summary of growth variables of abarco trees from Chocó biogeographic region.") |> kable_material(c("hover"))  
+```
+
+Observations of diameter growth vs. age reveal a nonlinear relationship between these two variables (Figure 1). The three growth patterns (acceleration, intermediate, and deceleration) appear to be clearly evident in throughout the observed lifetime. This suggests that nonlinear models should be employed for fitting.
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-width: 6
+#| fig-height: 4.5
+#| fig-cap: Figure 1. Diameter growth observations of abarco trees from Chocó biogeographic region.
+
+library(ggplot2)
+library(ggthemes)
+ggplot(data) +
+  geom_point(aes(x=Age, y=D)) +
+  scale_x_continuous(expression(Age~(years)))+
+  scale_y_continuous(expression(Diameter~(cm))) +
+  theme_few()
+```
+:::
+
+## 3. Using nls function
+
+::: justify
+For fitting the abarco growth data, we propose the von Bertalanffy model. This is a model commonly used in diameter growth modeling and possesses biological consistence owing to its differential equation formulation [@von1976teoria]. It assumes that diameter growth rates ($dD/dt$) result from the difference between two antagonistic forces, which are the biological processes of photosynthesis ($\eta D^m$) and respiration ($\gamma D$) [@Inga2017]. These biological processes are expressed as allometric relationships of the diameter, and the expression is given by:
+
+$$
+\frac{dD}{dt} = \eta D^m - \gamma D .\ \ \ \ \ \ \ (1)
+$$
+
+A simplified version of the integration of equation (1) is provided by:
+
+$$
+D=A(1-e^{-kt})^{\frac{1}{1-m}} ,\ \ \ \ \ \ \ (2)
+$$ where $D$ represents diameter (cm); $t$ is age (years); $A$ is the asymptote (the maximum diameter value as $t$ approaches infinity); $k$ is the intrinsic growth rate; and $m$ is a shape parameter [@Inga2017]. In this case, we assume that $D=0$ when $t=0$. Equation (2) will be fitted to the data.
+
+The fitting of the model using the *nls* function requires the model expression, data, and initial values for the parameters. It is important to suggest good initial values to increase the likelihood of convergence. Suggesting appropriate initial values requires an understanding of the analyzed phenomenon and the significance of the parameters. In this case, since the maximum observed diameter value is approximately 200 cm, it is recommended as the initial value for the parameter $A$. Based on the literature on diameter growth modeling of other species, reasonable inital values for $k$ and $m$ are 0.008 and 0.33, respectively [@enquist_allometric_1999; @Inga2017].
+
+```{r}
+#| eval: false
+# von Bertalanffy model
+model.nls <- nls(D ~ A*(1-exp(-k*Age))^(1/(1-m)), # model
+                 data = data, # data
+                 start = list(A=200, k=0.008, m=0.33)) # start values
+```
+
+When attempting the fitting, the following error occurs:
+
+::: {.callout-important title="Error"}
+Error in numericDeriv(form\[\[3L\]\], names(ind), env, central = nDcentral) : Missing value or an infinity produced when evaluating the model
+:::
+
+That means that the Gauss-Newton algorithm (default) fails due to indeterminate values in the calculation of partial derivatives [@Ritz2008]. Other algorithms will be tested using the *optim* function.
+:::
+
+## 4. Using optim function
+
+::: justify
+The *optim* function in R provides several optimization algorithms as alternatives to those in *nls*. These algorithms are based on Nelder-Mead, quasi-Newton, conjugate-gradient and simulated annealing methods [@R_cite]. They are referred to as Nelder-Mead, BFGS, CG, L-BFGS-B, SANN, and Brent. The use of *optim* function requires specifying the objective function to be optimized, with the default being minimization. In this case, our objective is to minimize the sum of squared errors, although other estimators such as maximum likelihood can be used.
+
+The function for sum of squared errors should be programmed; in this case, it is named SSE. It takes three arguments: params, D, and Age, where 'params' is the parameter vector.
+
+```{r}
+# Program the objective function
+SSE <- function(params, D, Age){
+    A <- params['A']
+    k <- params['k']
+    m <- params['m']
+    model <- A*((1-exp(-k*Age))^(1/(1-m))) # von Bertalanffy model
+    sum((D - model)^2) # Output is the sum of squared errors
+}
+```
+
+The *optim* function determines the parameter values that minimize the objective function (SSE). It takes as arguments the initial values, the SSE function, the variables for diameter and age, and the algorithm to be used. In this case, the BFGS algorithm is employed.
+
+```{r}
+# Establishing the initial values
+params <- c(A=200, k=0.008, m=0.33)
+
+# To implement the optim function 
+reg.SSE  <- with(data,
+                 optim(par = params, # parameters vector
+                       fn = SSE, # Objective function
+                       D = D, # Dependent variable
+                       Age = Age, # Independent variable
+                       method = "BFGS")) # Optimization algorithm  
+reg.SSE
+```
+
+The output of the *optim* function displays the estimated parameter values (\$par), the minimum value of sum of squared errors (\$value), the number of calls to the objective function and its gradient used in the optimization process (\$ counts), and the convergence, which is 0 when it is successful and 1 when the iteration limit maxit has been reached [@R_cite].
+
+In the case of abarco data and the von Bertalanffy model, there was succesful convergence, resulting in estimated parameter values of 201.63, 0.0094, and 0.478 for A, k, and m, respectively. The fitted model is illustrated in Figure 2.
+
+```{r}
+#| fig-align: center
+#| fig-width: 6
+#| fig-height: 4.5
+#| fig-cap: Figure 2. Estimated diameter growth of abarco trees from Chocó biogeographic region, using a von Bertalanffy model.
+
+# Recovering the estimated parameters.
+A = reg.SSE$par['A']; k = reg.SSE$par['k']; m = reg.SSE$par['m']
+
+# Creating a estimated curve
+x <- seq(0,165,1)
+y <- A*((1-exp(-k*x))^(1/(1-m)))
+data3 <- data.frame(x,y)
+
+# Using ggplot to plot the estimated model
+ggplot(data) +
+  geom_point(aes(x=Age, y=D)) +
+  geom_line(data=data3, aes(x=x, y=y), linewidth=0.5) +
+  scale_x_continuous(expression(Age~(years)))+
+  scale_y_continuous(expression(Diameter~(cm))) +
+  theme_few()
+```
+
+Although the model was fitted, it does not provide the variance of each estimated parameter, which is important for inference. We may be interested in evaluating the statistical significance of each parameter. There are different methods for calculating the parameter variances. One is based on the delta method, another relies on linear approximation using the gradient matrix, and the third involves computational methods (bootstrap). Next, we will demonstrate the implementation of the bootstrap method to estimate the parameter variances.
+:::
+
+## 5. Parameter variances
+
+::: justify
+The bootstrap method involves taking multiple random resamples, each with the same size as the original sample, and with replacement [@efron_introduction_1994; @Ritz2008]. For each resample, the same von Bertalanffy model is fitted using the *optim* function, and the estimated parameters are collected.
+
+In this case, 1000 resamples were generated, resulting in 1000 sets of estimated values for A, k, and m. An estimator of the variance or standard deviation for each parameter is obtained by calculating these statistics for each of the estimated parameter vectors. To assess the significance of each estimated parameter, we could calculate t-values and p-values using the original estimates and the variances estimated through the bootstrap method.
+
+```{r}
+set.seed(1234) # Establishing the seed so that it's reproducible
+nBoot = 1000 # number of resamples
+n = dim(data)[1] # sample size 
+index = as.numeric(rownames(data)) # index of the records
+
+BootP <- function(){
+    
+    # Resampling
+    Sample <- data[sample(index, size = n, replace = TRUE),]
+    
+    # Estimating the model 
+    res.Boot <- with(Sample,
+                 optim(params,
+                       fn = SSE,
+                       D = D,
+                       Age = Age,
+                       method='BFGS',
+                       control=list(maxit=10000)))
+    
+    # Extracting the estimated values
+    if(res.Boot$convergence != 0){
+      c(A=NA, k=NA, m=NA)
+    }else{
+      res.Boot$par
+    } 
+}
+
+# Applying the BootP function for nBoot resamples.
+params.boot <- data.frame(t(replicate(nBoot, BootP())))
+
+# Extracting the standard deviation by parameter.
+stand.error <- apply(params.boot, MARGIN=2, FUN=sd)
+
+# Calculating t-value and p-value
+t.value <- reg.SSE$par/stand.error 
+p.value <- 2*(1-pt(abs(t.value), n-dim(params.boot)[2]))
+
+# Summarizing the results.
+tabla_resumen <- data.frame(
+  Parameter = c("A","k","m"),
+  Estimated = reg.SSE$par,
+  SE = stand.error,
+  `t-value` = t.value,
+  `p-value` = p.value
+)
+
+rownames(tabla_resumen) <- NULL
+kbl((tabla_resumen), digits=3, align = "c", na="", caption = "Table 2. Estimated parameters of the von Bertalanffy equation to model diameter growth of abarco
+    \ntrees from Chocó biogeographic region.") |> kable_material(c("hover"))  
+```
+
+According to Table 2, all estimated parameters exhibitt statistical significance at a significance level of 0.05. Furthermore, using the computed bootstrap models, various estimated trajectories can be plotted (Figure 3).
+
+```{r}
+# Store the predictions of each bootstrap model
+line.boot <- function(params){
+  y.boot <- params['A']*((1-exp(-params['k']*x))^(1/(1-params['m'])))
+  y.boot
+}
+MatrixPred <- apply(params.boot, MARGIN=1, FUN=line.boot)
+```
+
+```{r}
+# Organize the predictions in a dataframe.
+x.boot <- rep(x, 1000)
+y.boot <- c()
+for(i in 1:1000){
+  y.boot <- c(y.boot, MatrixPred[,i])
+}
+lineboot <- c()
+for(i in 1:1000){
+  lineboot <- c(lineboot, rep(i, 166))
+}
+data4 <- data.frame(x.boot, y.boot, lineboot)
+```
+
+```{r}
+#| fig-align: center
+#| fig-width: 6
+#| fig-height: 4.5
+#| fig-cap: Figure 3. Bootstrap trajectories estimated for diameter growth of abarco trees from Chocó biogeographic region.
+
+ggplot(data) +
+  geom_point(aes(x=Age, y=D)) +
+  geom_line(data=data4, aes(x=x.boot, y=y.boot, color=as.factor(lineboot)), linewidth=0.3, alpha=0.1)+
+  guides(color = "none")+
+  scale_color_manual(values=rep("gray",1000))+
+  geom_line(data=data3, aes(x=x, y=y), linewidth=0.5) +
+  scale_x_continuous(expression(Age~(years)))+
+  scale_y_continuous(expression(Diameter~(cm))) +
+  theme_few()
+```
+:::
+
+## 6. Final considerations
+
+::: justify
+We demonstrated the use of the *optim* function in R for fitting forest growth models. In this case, a von Bertalanffy model was utilized with specific initial values. However, we recommend being careful with the initial values. They should be chosen in a reasonable manner based on an understanding of the phenomenon. For further analysis, the initial values should undergo robustness tests to ensure that we are reaching a global minimum when evaluating the sum of squared errors function. This entails testing different initial values and examining the value of the objective function.
+
+On the other hand, only the BFGS algorithm, the von Bertalanffy model, and least-squares estimators were implemented. However, in addition to these, other algorithms, models, and estimators could be utilized. It is only necessary to program the objective function and then perform the optimization. Finally, after fitting the growth model, it is essential to test various basic assumptions of nonlinear regression. Some of these assumptions include normality, independence and homoscedasticity on the residuals [@bates1988nonlinear].
+:::
+
+## 7. References
+
+::: {#refs}
+:::

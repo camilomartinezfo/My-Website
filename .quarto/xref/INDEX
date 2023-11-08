@@ -19,5 +19,23 @@
   },
   "portfolio.qmd": {
     "portfolio.html": "25572295"
+  },
+  "Optim.qmd": {
+    "Optim.html": "459b911e"
+  },
+  "PointPatterns.qmd": {
+    "PointPatterns.html": "34f63481"
+  },
+  "filePortfolio/Optim.qmd": {
+    "Optim.html": "a617f7eb"
+  },
+  "filePortfolio/PointPatterns.qmd": {
+    "PointPatterns.html": "150b4c7f"
+  },
+  "filePortfolio/OptimFunction/Optim.qmd": {
+    "Optim.html": "c5fa7beb"
+  },
+  "filePortfolio/AtucorrelatedGrowth.qmd": {
+    "AtucorrelatedGrowth.html": "2685666f"
   }
 }

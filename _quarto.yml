@@ -7,13 +7,39 @@ website:
   navbar:
     background: secondary
     left:
-      - href: index.qmd
-        text: Home
-      - skills.qmd
-      - teaching.qmd
-      - work.qmd
-      - publications.qmd
-      - portfolio.qmd
+      - text: "Home"
+        file: index.qmd
+      - text: "Skills"
+        file: skills.qmd
+      - text: "Teaching"
+        file: teaching.qmd
+      - text: "Work Experience"
+        file: work.qmd
+      - text: "Publications"
+        file: publications.qmd
+      - text: "Portfolio"
+        file: portfolio.qmd
+  
+  sidebar: 
+    - title: "Portfolio"
+      style: "floating"
+      contents:
+        - text: "Welcome"
+          file: portfolio.qmd
+        - section: "Forest Growth Modeling"
+          contents:
+            - text: "- Optim for nls"
+              file: filePortfolio/OptimFunction/Optim.qmd
+            - text: "- Autocorrelated growth"
+              file: filePortfolio/AtucorrelatedGrowth.qmd
+        - section: "Spatial Analysis"
+          contents: 
+            - text: "- Point patterns modeling"
+    
+    - title: "Publications"
+      contents:
+        - publications.qmd
+    
   favicon: Images/favicon.png
   page-footer: 
     center: "Copyright 2023, Camilo Martínez"

@@ -1,3 +1,5 @@
 ---
-title: "Portfolio"
+title: "Welcome to my portfolio"
 ---
+
+This page contains different documents about the use of R in forest growth modeling, spatial statistics, ecology, simulation analysis, among others.
