@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Camilo Enrique Martínez Forero",
     "section": "",
-    "text": "Forest engineer and master’s student in Forests and Environmental Conservation with experience in modeling forest growth in plantations and natural forest species. My interests are centered around quantitative research methods, statistical modeling, programming, and spatial analysis, all applied to the fields of forest growth, forest management, ecology, and deforestation."
+    "text": "Forest engineer and student of last semester in the Master of Science in Forests and Environmental Conservation, with experience in growth modeling in both forest plantations and species of natural tropical forests. My interests are focused on the research of quantitative methods, statistical modeling, programming and spatial analysis, all applied to forest growth, forest management, ecology, and deforestation."
   },
   {
     "objectID": "index.html#pregrado",
@@ -102,7 +102,7 @@
     "href": "teaching.html",
     "title": "Teaching",
     "section": "",
-    "text": "Classes in the Forest Growth Modeling module of the First Diploma in Forest Resource Economics, offered by FEDEMADERAS.\n\n\n\n\n\n\n\nOrganization\nFederación Nacional de Industriales de la Madera, FEDEMADERAS, Colombia.\n\n\nDates\nAugust 2023\n\n\n\n\n\n\nConducted classes on quantitative and statistical methods utilized in forest growth modeling, theory of organic growth and site index concepts.\nAssisting students with questions."
+    "text": "Organization\nUniversidad Nacional de Colombia sede Medellín. Facultad de Ciencias. Departamento de Estadística\n\n\nDates\nFeb 2024 - May 2024\n\n\n\n\n\n\nConducting classes for the bachelor course of Statistics I, including topics of descriptive statistics, discrete and continuous probability distributions, maximum likelihood estimators, confidence intervals, and hypothesis testing.\nProviding academic guidance to students during the course.\nParticipation in course coordination meetings."
   },
   {
     "objectID": "teaching.html#monitor-académico---crecimiento-forestal",
@@ -278,5 +278,33 @@
     "title": "Considering autocorrelation in tree ring data",
     "section": "",
     "text": "Coming soon"
+  },
+  {
+    "objectID": "teaching.html#lecturer---statistics",
+    "href": "teaching.html#lecturer---statistics",
+    "title": "Teaching",
+    "section": "",
+    "text": "Organization\nUniversidad Nacional de Colombia sede Medellín. Facultad de Ciencias. Departamento de Estadística\n\n\nDates\nFeb 2024 - May 2024\n\n\n\n\n\n\nConducting classes for the bachelor course of Statistics I, including topics of descriptive statistics, discrete and continuous probability distributions, maximum likelihood estimators, confidence intervals, and hypothesis testing.\nProviding academic guidance to students during the course.\nParticipation in course coordination meetings."
+  },
+  {
+    "objectID": "teaching.html#lecturer---forest-growth-modeling",
+    "href": "teaching.html#lecturer---forest-growth-modeling",
+    "title": "Teaching",
+    "section": "Lecturer - Forest Growth Modeling",
+    "text": "Lecturer - Forest Growth Modeling\nClasses in the Forest Growth Modeling module of the First Diploma in Forest Resource Economics, offered by FEDEMADERAS.\n\n\n\n\n\n\n\nOrganization\nFederación Nacional de Industriales de la Madera, FEDEMADERAS, Colombia.\n\n\nDates\nAugust 2023\n\n\n\n\nFunctions:\n\nConducted classes on quantitative and statistical methods utilized in forest growth modeling, theory of organic growth and site index concepts.\nAssisting students with questions."
+  },
+  {
+    "objectID": "teaching.html#teaching-assistant---forest-growth",
+    "href": "teaching.html#teaching-assistant---forest-growth",
+    "title": "Teaching",
+    "section": "Teaching Assistant - Forest Growth",
+    "text": "Teaching Assistant - Forest Growth\nProvided (ad honorem) support in teaching activities for students in the undergraduate forest growth course, under the supervision of Professor Sergio Alonso Orrego Suaza.\n\n\n\n\n\n\n\nOrganization\nUniversidad Nacional de Colombia sede Medellín. Facultad de Ciencias Agrarias. Departamento de Ciencias Forestales\n\n\nDates\nMarch 2022 - June 2022\nFebruary 2023 - June 2023\n\n\n\n\nFunctions:\n\nConducted classes on quantitative methods utilized in forest growth modeling.\nDeveloped R scripts for growth models and nonlinear regression methods.\nTidying of forest growth databases."
+  },
+  {
+    "objectID": "teaching.html#guest-lecturer---silviculture-of-forest-plantations",
+    "href": "teaching.html#guest-lecturer---silviculture-of-forest-plantations",
+    "title": "Teaching",
+    "section": "Guest Lecturer - Silviculture of Forest Plantations",
+    "text": "Guest Lecturer - Silviculture of Forest Plantations\nProvided support in teaching activities for students in the undergraduate silviculture of forest plantations course, under the supervision of Professor Luis Fernando Osorio Vélez.\n\n\n\n\n\n\n\nOrganization\nUniversidad Nacional de Colombia sede Medellín. Facultad de Ciencias Agrarias. Departamento de Ciencias Forestales\n\n\nDates\nSeptember 2022, March 2023\n\n\n\n\nFunctions:\n\nConducted classes on quantitative and statistical methods utilized in forest growth modeling, site index and productivity of forest plantations."
   }
 ]

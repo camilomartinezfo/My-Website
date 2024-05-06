@@ -2,7 +2,23 @@
 title: "Teaching"
 ---
 
-## Professor - Forest Growth Modeling
+## Lecturer - Statistics
+
++---------------+---------------------------------------------------------------------------------------------------+
+| Organization  | Universidad Nacional de Colombia sede Medellín. Facultad de Ciencias. Departamento de Estadística |
++---------------+---------------------------------------------------------------------------------------------------+
+| Dates         | Feb 2024 - May 2024                                                                               |
++---------------+---------------------------------------------------------------------------------------------------+
+
+#### Functions:
+
+-   Conducting classes for the bachelor course of Statistics I, including topics of descriptive statistics, discrete and continuous probability distributions, maximum likelihood estimators, confidence intervals, and hypothesis testing.
+
+-   Providing academic guidance to students during the course.
+
+-   Participation in course coordination meetings.
+
+## Lecturer - Forest Growth Modeling
 
 Classes in the Forest Growth Modeling module of the First Diploma in Forest Resource Economics, offered by FEDEMADERAS.
 
@@ -18,7 +34,7 @@ Classes in the Forest Growth Modeling module of the First Diploma in Forest Reso
 
 -   Assisting students with questions.
 
-## Academic tutor - Forest Growth
+## Teaching Assistant - Forest Growth
 
 Provided (*ad honorem*) support in teaching activities for students in the undergraduate forest growth course, under the supervision of Professor Sergio Alonso Orrego Suaza.
 
@@ -35,9 +51,9 @@ Provided (*ad honorem*) support in teaching activities for students in the under
 
 -   Developed R scripts for growth models and nonlinear regression methods.
 
--   Organized databases related to forest growth.
+-   Tidying of forest growth databases.
 
-## Teaching support - Silviculture of Forest Plantations
+## Guest Lecturer - Silviculture of Forest Plantations
 
 Provided support in teaching activities for students in the undergraduate silviculture of forest plantations course, under the supervision of Professor Luis Fernando Osorio Vélez.
 

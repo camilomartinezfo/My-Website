@@ -3,7 +3,7 @@ title: "Camilo Enrique Martínez Forero"
 ---
 
 ::: justify
-Forest engineer and master's student in Forests and Environmental Conservation with experience in modeling forest growth in plantations and natural forest species. My interests are centered around quantitative research methods, statistical modeling, programming, and spatial analysis, all applied to the fields of forest growth, forest management, ecology, and deforestation.
+Forest engineer and student of last semester in the Master of Science in Forests and Environmental Conservation, with experience in growth modeling in both forest plantations and species of natural tropical forests. My interests are focused on the research of quantitative methods, statistical modeling, programming and spatial analysis, all applied to forest growth, forest management, ecology, and deforestation. 
 :::
 
 ![](Images/Profile.png){fig-align="center" width="250"}
